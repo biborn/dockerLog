@@ -1,0 +1,5 @@
+*/config.txt
+./client/logs/*.txt
+*code.js
+*__pycache__*
+*.rdb
