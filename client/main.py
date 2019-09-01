@@ -84,13 +84,9 @@ def ngrok_process():
 # Endpoint to get logs
 
 if __name__ == "__main__":
-    #------------------------------------------------------------------
-    #---------- NGROCK CODE LAUNCHING  ------------------------------------
-    #------------------------------------------------------------------
-    #Thread(target = ngrok_process).start()
-    #------------------------------------------------------------------
-    #---------- NGROCK CODE LAUNCHING  ------------------------------------
-    #------------------------------------------------------------------
+    # Starting the ngrok thread
+    Thread(target = ngrok_process).start()
+
 
     # Starting the app
     app.run(host='0.0.0.0', debug=True, port=7974)

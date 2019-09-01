@@ -1,4 +1,4 @@
-<img src="./client/static/logoo.png">
+<img src="./client/static/logoo.png"/>>
 
 # DockerLogs
 
@@ -15,11 +15,13 @@ There must be one instance running locally, the principe is that, ngrock will op
 
 # Installation
 
-- First you need to rename example.config.txt to config.txt and asl the Author for extras elements.
+- First you need to rename example.config.txt to config.txt and ask the Author for extras elements.
 
 - Second: Make sure to configure the ServerIp/Host for the client and the server by renaming example.config.txt to config.txt
 
-- Third:
+- Third: the the server directory and place it on your host where docker containers are running.
+
+- Fourth:
     - For Client, run `cd client && pip install -r requirements.txt && sh ./install.sh`.
 
     - For the Server, you just need to run `cd client && pip install -r requirements.txt && sh ./install.sh`.
