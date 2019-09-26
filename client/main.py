@@ -38,7 +38,7 @@ def index2():
         jsonMessage = json.loads(str(r.content).replace("\\n", "").replace("b'", "").replace("'", ""))
 
         # Build the response
-        response = jsonify({ 'status':'success', 'message': _base64.DECODE(jsonMessage['message'])[-10000:] })
+        response = jsonify({ 'status':'success', 'message': _base64.DECODE(jsonMessage['message'])[-50000:] })
     except:
         response = jsonify({ 'status':'error', 'message': 'Something went Wrong!' })
 
@@ -57,7 +57,7 @@ def index3():
         jsonMessage = json.loads(str(r.content).replace("\\n", "").replace("b'", "").replace("'", ""))
 
         # Build the response
-        response = jsonify({ 'status':'success', 'message': _base64.DECODE(jsonMessage['message'])[-10000:] })
+        response = jsonify({ 'status':'success', 'message': _base64.DECODE(jsonMessage['message'])[-50000:] })
     except:
         response = jsonify({ 'status':'error', 'message': 'Something went Wrong!' })
 

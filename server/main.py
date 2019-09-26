@@ -30,7 +30,7 @@ def index2():
             output = _base64.ENCODE( str(proc.communicate()[0]) )
 
             # Build the response
-            response = jsonify({ 'status':'success', 'message': str(output)[-10000:] })
+            response = jsonify({ 'status':'success', 'message': str(output)[-50000:] })
         else:
             response = jsonify({ 'status':'error', 'message': 'Password not correct!' })
 
@@ -51,7 +51,7 @@ def index3():
             output = _base64.ENCODE( str(proc.communicate()[0]) )
 
             # Build the response
-            response = jsonify({ 'status':'success', 'message': str(output)[-10000:] })
+            response = jsonify({ 'status':'success', 'message': str(output)[-50000:] })
         else:
             response = jsonify({ 'status':'error', 'message': 'Password not correct!' })
 
