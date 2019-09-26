@@ -1,2 +1,3 @@
 Add a feature to re-deploy from client a container on the server
-- stop a container remotely
+- start/stop a container remotely
+- Or better to send command directly from the frontEndWeb Client
