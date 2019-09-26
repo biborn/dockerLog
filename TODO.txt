@@ -1,0 +1,2 @@
+Add a feature to re-deploy from client a container on the server
+- stop a container remotely
