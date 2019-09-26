@@ -26,15 +26,6 @@ app.config['Secret'] = "Secret"
 
 @app.route('/', methods=['GET']) # To prevent Cors issues
 def index():
-    # # Sent in GET requests
-    # param = request.args.get('param')
-
-    #  # Emission de la requette au serveur avec le port ouver 5000
-
-    # # Build the response
-    # response = jsonify({ 'status':'success', 'message': 'Welcome to dockerLog API.' })
-    # # Let's allow all Origin requests
-    # response.headers.add('Access-Control-Allow-Origin', '*') # To prevent Cors issues
     return render_template("index.html")
 
 
@@ -45,7 +36,7 @@ def index2():
         # sending get request and saving the response as response object 
         r = requests.get(url = URL+"/getcontainers?password="+Password) 
         jsonMessage = json.loads(str(r.content).replace("\\n", "").replace("b'", "").replace("'", ""))
-    
+
         # Build the response
         response = jsonify({ 'status':'success', 'message': _base64.DECODE(jsonMessage['message'])[-10000:] })
     except:
@@ -64,7 +55,7 @@ def index3():
         # sending get request and saving the response as response object 
         r = requests.get(url = URL+"/getlogs?container="+str(container)+"&password="+Password) 
         jsonMessage = json.loads(str(r.content).replace("\\n", "").replace("b'", "").replace("'", ""))
-    
+
         # Build the response
         response = jsonify({ 'status':'success', 'message': _base64.DECODE(jsonMessage['message'])[-10000:] })
     except:
@@ -79,9 +70,6 @@ def ngrok_process():
     print("Starting ngrok...")
     os.system("./ngrok http 7974")
 
-# Endpoint to list containers
-
-# Endpoint to get logs
 
 if __name__ == "__main__":
     # Starting the ngrok thread

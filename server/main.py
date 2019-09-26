@@ -24,7 +24,7 @@ def index2():
     try:
         passord = request.args.get('password')
         container = request.args.get('container')
-        
+
         if sha256(passord.encode()).hexdigest() == Password:
             proc = Popen(['docker', 'logs', str(container)], stdout=PIPE, stderr=STDOUT)
             output = _base64.ENCODE( str(proc.communicate()[0]) )
