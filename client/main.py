@@ -73,8 +73,7 @@ def ngrok_process():
 
 if __name__ == "__main__":
     # Starting the ngrok thread
-    Thread(target = ngrok_process).start()
-
+    # Thread(target = ngrok_process).start()
 
     # Starting the app
     app.run(host='0.0.0.0', debug=True, port=7974)
