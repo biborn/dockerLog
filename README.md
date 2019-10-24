@@ -1,19 +1,25 @@
-<img src="./client/static/logoo.png"/>>
+<img src="./client/static/logoo.png" width="200"/>
 
-# DockerLogs
+# DockerLog
 
 An Experimental way to get Logs of any of your application running with docker on a server directly on a browser client application.
 
-# Features
+## Features
 
 - Get all running containers at the server(ID, names, etc...).
 - Get all logs from a docker container(in realtime) with a client app(browser).
+- Search a specific container above the provided list.
 
-# How it's works
+
+## Demo
+
+<img src="./images/render.png"/>
+
+## How it's works
 
 There must be one instance running locally, the principe is that, ngrock will open a dor to access a computer of one developper and then the client there will send requests directly to the server.
 
-# Installation
+## Installation
 
 - First you need to rename example.config.txt to config.txt and ask the Author for extras elements.
 
@@ -27,16 +33,18 @@ There must be one instance running locally, the principe is that, ngrock will op
     - For the Server, you just need to run `cd client && pip install -r requirements.txt && sh ./install.sh`.
 
 
-# How to launch:
-
-- Client(browser):
-    Just run `cd client && sh ./start.sh`, the client app is running on `http://127.0.0.1:7974`
+## How to launch:
 
 - Server(in your server), you can automatize the auto-run with pm2, the app will running on server at `http://127.0.0.1:5000`:
     Just run `cd server && sh ./dockerLog.sh.sh`.
 
+- Client(browser):
+    Just run `cd client && sh ./start.sh`, the client app is running on `http://127.0.0.1:7974`
+
+
 Another way with the standAlone version is to hit `python dl.py`.
 
-# Author
+
+## Author
 
 - Sanix-darker (Ange SAADJIO).
